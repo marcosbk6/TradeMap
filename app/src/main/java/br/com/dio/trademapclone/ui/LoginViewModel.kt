@@ -16,10 +16,10 @@ class LoginViewModel(private val apiService: ApiService) : ViewModel() {
     private val _usuario = MutableLiveData<Usuario>()
     val usuario: LiveData<Usuario> = _usuario
 
-    fun login(login: String) {
+    fun login(email: String, senha: String) {
         viewModelScope.launch(Dispatchers.IO) {
             runCatching {
-                val usuario = apiService.login(login)
+                val usuario = apiService.login(email, senha)
                 UsuarioLogado.usuario = usuario
                 _usuario.postValue(usuario)
             }.onFailure {

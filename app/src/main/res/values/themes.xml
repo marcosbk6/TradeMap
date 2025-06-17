@@ -6,14 +6,24 @@
 		<item name="colorPrimaryVariant">@color/colorAccent</item>
 		<item name="colorOnPrimary">@color/white</item>
 		<!-- Secondary brand color. -->
+		<item name="android:windowBackground">@color/colorPrimary</item>
+		<item name="android:statusBarColor">@color/colorPrimary</item>
+		<item name="android:navigationBarColor">@color/colorPrimary</item>
 	</style>
 
 	<style name="Theme.TradeMapCloneDIO.NoActionBar">
 		<item name="windowActionBar">false</item>
 		<item name="windowNoTitle">true</item>
+		<item name="android:windowBackground">@color/colorPrimary</item>
+		<item name="android:statusBarColor">@color/colorPrimary</item>
+		<item name="android:navigationBarColor">@color/colorPrimary</item>
 	</style>
 
-	<style name="Theme.TradeMapCloneDIO.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+	<style name="Theme.TradeMapCloneDIO.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+		<item name="android:windowBackground">@color/colorPrimary</item>
+	</style>
 
-	<style name="Theme.TradeMapCloneDIO.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+	<style name="Theme.TradeMapCloneDIO.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark">
+		<item name="android:windowBackground">@color/colorPrimary</item>
+	</style>
 </resources>

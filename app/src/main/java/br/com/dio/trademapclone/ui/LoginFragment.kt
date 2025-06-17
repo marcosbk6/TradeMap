@@ -33,8 +33,9 @@ class LoginFragment : Fragment() {
 
     private fun configuraBotaoLogin() {
         binding.button.setOnClickListener {
-            val usuario = binding.textInputLayout.editText?.text.toString()
-            viewModel.login(usuario)
+            val usuario = binding.usuarioEditText.text.toString()
+            val senha = binding.senhaEditText.text.toString()
+            viewModel.login(usuario, senha)
         }
     }
 
